@@ -9,12 +9,23 @@
     <title><%= current_page.data.title || "| brogus.space" %></title>
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "site" %>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   </head>
   <body>
-    <div class="header">
-      <h1>welcome to brogus.space</h1>
-      <h3>the leading information source on brogi</h3>
-    </div>
+    <nav id="navbar">
+      <ul class="content">
+        <li id="title"><a href="index.html">brogus.space</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Brogal Implants</a></li>
+        <li><a href="#">Seepage and Discharge</a></li>
+        <li><a href="#">Our Team</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
     <%= yield %>
+    <footer>
+      <hr class="thin"/>
+      <p>© 2017 Brogus Consultants, LLC</p>
+    </footer>
   </body>
 </html>

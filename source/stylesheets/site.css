@@ -1,0 +1,182 @@
+@keyframes rainbow {
+  0% { color: #0ec0ff; }
+  10% { color: #0e1eff; }
+  20% { color: #8f0eff; }
+  30% { color: #ff0ef5; }
+  40% { color: #ff0e6f; }
+  50% { color: #ff1c0e; }
+  60% { color: #ff960e; }
+  70% { color: #ffe40e; }
+  80% { color: #afef39; }
+  90% { color: #0eff71; }
+  100% { color: #0effde; }
+}
+
+@keyframes rainbowborder {
+  0% { border-color: #0ec0ff; }
+  10% { border-color: #0e1eff; }
+  20% { border-color: #8f0eff; }
+  30% { border-color: #ff0ef5; }
+  40% { border-color: #ff0e6f; }
+  50% { border-color: #ff1c0e; }
+  60% { border-color: #ff960e; }
+  70% { border-color: #ffe40e; }
+  80% { border-color: #afef39; }
+  90% { border-color: #0eff71; }
+  100% { border-color: #0effde; }
+}
+
+@keyframes pulse {
+  0% {
+   opacity: 0;
+   color: #89b5ff;
+  }
+
+  60% {
+    color: #680dff;
+  }
+
+  80% {
+    color: #ff11c3;
+  }
+
+  100% {
+    opacity: 1;
+    color: #ff0b45;
+  }
+}
+
+body {
+  background-color: #232323;
+  color: #ffffff;
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+}
+
+footer {
+  padding: 30px 75px 30px 75px;
+}
+
+footer p {
+  margin-top: 20px;
+}
+
+.warning {
+  background-color: #ff3030;
+  padding: 10px;
+  background-image: url(/images/bang.png);
+  background-repeat: no-repeat;
+  background-position: 2% 50%;
+  border-radius: 5px;
+}
+
+.rainbow-gradient {
+  animation: pulse 3s 1;
+  color: #ff0b45;
+}
+
+.warning h2 {
+  margin: 13px 0 10px 130px;
+}
+
+.warning p {
+  margin-left: 130px;
+}
+
+.thin {
+  border-bottom: 0;
+}
+
+.content {
+  padding: 0 75px;
+}
+
+#header {
+  width: 100%;
+  text-align: center;
+  background-image: url(http://cdn.wonderfulengineering.com/wp-content/uploads/2014/04/space-wallpapers-3.jpg);
+  background-size: 100%;
+  background-position: 0 -320px;
+  padding: 75px 0 55px 0;
+}
+
+#header h1 {
+  font-size: 6em;
+  margin: 5px;
+}
+
+#header h2 {
+  font-size: 2em;
+  margin: 7px 0 10px 0;
+}
+
+#navbar {
+  background-color: #232323;
+  width: 100%;
+  position: fixed;
+  height: 50px;
+  z-index: 999;
+}
+
+#navbar ul {
+  margin: 0;
+}
+
+#navbar li {
+  top: 0;
+  float: left;
+  padding: 15px 15px;
+  display: block;
+}
+
+li#title {
+  font-size: 20px;
+  padding: 11px 15px 11px 0;
+}
+
+#intros {
+  overflow: auto;
+}
+
+#intros section {
+  width: 30%;
+  padding: 1%;
+  float: left;
+  text-align: center;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+p, h1, h2, h3, h4, h5, h6, img {
+  transition: inherit;
+  color: inherit;
+}
+
+a .img-circle {
+  border: 2px solid #0effde;
+}
+
+a {
+  color: #0effde;
+  text-decoration: none;
+  transition: .4s ease-in-out;
+}
+
+nav a {
+  color: white;
+}
+
+a:hover, a:hover *, nav a:hover {
+  color: pink;
+  animation: rainbow 1.8s infinite;
+}
+
+a:hover .img-circle {
+  animation: rainbowborder 1.8s infinite;
+}
+
+a:hover [hover=rotate] {
+  transform: rotate(360deg);
+}
