@@ -10,16 +10,35 @@
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "site" %>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
+                $(this).toggleClass('open');
+                $('.navbar-list').toggleClass('navbar-open');
+            });
+        });
+    </script>
   </head>
   <body>
     <nav id="navbar">
-      <ul class="content">
-        <li id="title"><a href="index.html">brogus.space</a></li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">Brogal Implants</a></li>
-        <li><a href="#">Seepage and Discharge</a></li>
-        <li><a href="#">Our Team</a></li>
-        <li><a href="#">Contact</a></li>
+
+      <!-- mobile -->
+      <div id="nav-icon1">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <h3>brogus.space</h3>
+
+      <!-- desktop & mobile -->
+      <ul class="content navbar-list">
+        <li id="title"><%= link_to "brogus.space", "/" %></li>
+        <li><%= current_link_to "Home", "/" %></li>
+        <li><%= current_link_to "Brogal Implants", "/implants.html" %></li>
+        <li><%= current_link_to "Seepage and Discharge", "/seepage_and_discharge.html" %></li>
+        <li><%= current_link_to "Our Team", "/team.html" %></li>
+        <li><%= current_link_to "Contact", "/contact.html" %></li>
       </ul>
     </nav>
     <%= yield %>
