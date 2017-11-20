@@ -102,9 +102,9 @@ footer p {
 #header {
   width: 100%;
   text-align: center;
-  background-image: url(http://cdn.wonderfulengineering.com/wp-content/uploads/2014/04/space-wallpapers-3.jpg);
+  background-image: url(/images/space2.jpg);
   background-size: 100%;
-  background-position: 0 -320px;
+  background-position: 0 -150px;
   padding: 75px 0 55px 0;
 }
 
@@ -115,7 +115,7 @@ footer p {
 
 #header h2 {
   font-size: 2em;
-  margin: 7px 0 10px 0;
+  margin: 7px 15px 10px 15px;
 }
 
 #navbar {
@@ -133,13 +133,53 @@ footer p {
 #navbar li {
   top: 0;
   float: left;
-  padding: 15px 15px;
+  padding: 0;
   display: block;
+}
+
+.active a {
+  color: black;
+}
+
+.active.space1 a {
+  background: url('/images/space-small-1.jpg') 300px -615px;
+}
+
+.active.space2 a {
+  background: url('/images/space-small-2.jpg') 300px -615px;
+}
+
+.active.space3 a {
+  background: url('/images/space-small-3.jpg') 300px -615px;
+}
+
+.active.space4 a {
+  background: url('/images/space-small-4.jpg') 300px -615px;
+}
+
+.active.space5 a {
+  background: url('/images/space-small-5.jpg') 300px -615px;
+}
+
+.active.space6 a {
+  background: url('/images/space-small-6.jpg') 300px -615px;
+}
+
+.active.space7 a {
+  background: url('/images/space-small-7.jpg') 300px -615px;
+}
+
+#navbar li a {
+  padding: 15px 15px;
 }
 
 li#title {
   font-size: 20px;
   padding: 11px 15px 11px 0;
+}
+
+li#title a {
+  padding: 0;
 }
 
 #intros {
@@ -174,6 +214,7 @@ a {
 
 nav a {
   color: white;
+  display: block;
 }
 
 a:hover, a:hover *, nav a:hover {
@@ -189,8 +230,20 @@ a:hover [hover=rotate] {
   transform: rotate(360deg);
 }
 
+table {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+
+table td, table th {
+  border: 1px solid white;
+  padding: 4px;
+}
+
 #featurettes section {
   margin: 40px 0;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #9a9a9a;
 }
 
 #featurettes section:before, #featurettes section:after {
@@ -203,11 +256,23 @@ a:hover [hover=rotate] {
 }
 
 .featurette-image img {
-  height: 300px;
+  width: 300px;
+  max-width: 100%;
+  height: auto;
 }
 
-.featurette-image, .featurette-content {
+#featurettes section:nth-child(odd) div {
   float: left;
+}
+
+#featurettes section:nth-child(even) div {
+  float: right;
+}
+
+#featurettes section:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+  padding-bottom: 0;
 }
 
 .featurette-heading {
@@ -224,6 +289,15 @@ a:hover [hover=rotate] {
   width: 58%;
 }
 
+#mobile-nav {
+  background-color: black;
+  height: 0;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
 #navbar h3 {
   text-align: center;
   margin: 0;
@@ -232,10 +306,9 @@ a:hover [hover=rotate] {
   display: none;
 }
 
-/* Animated hamburger */
-/* Icon 1 */
+/* Animated nav button */
 
-#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
+#nav-button {
   margin: 7px 0 0 17px;
   width: 50px;
   height: 45px;
@@ -252,7 +325,7 @@ a:hover [hover=rotate] {
   display: none;
 }
 
-#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
+#nav-button span {
   position: absolute;
   display: block;
   margin: 7px 0;
@@ -272,19 +345,19 @@ a:hover [hover=rotate] {
   transition: .25s ease-in-out;
 }
 
-#nav-icon1 span:nth-child(1) {
+#nav-button span:nth-child(1) {
   top: 1px;
 }
 
-#nav-icon1 span:nth-child(2) {
+#nav-button span:nth-child(2) {
   top: 16px;
 }
 
-#nav-icon1 span:nth-child(3) {
+#nav-button span:nth-child(3) {
   top: 31px;
 }
 
-#nav-icon1.open span:nth-child(1) {
+#nav-button.open span:nth-child(1) {
   top: 16px;
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
@@ -292,7 +365,7 @@ a:hover [hover=rotate] {
   transform: rotate(135deg);
 }
 
-#nav-icon1.open span:nth-child(2) {
+#nav-button.open span:nth-child(2) {
   top: 16px;
   -webkit-transform: rotate(-135deg);
   -moz-transform: rotate(-135deg);
@@ -300,7 +373,7 @@ a:hover [hover=rotate] {
   transform: rotate(-135deg);
 }
 
-#nav-icon1.open span:nth-child(3) {
+#nav-button.open span:nth-child(3) {
   top: 16px;
   -webkit-transform: rotate(-135deg);
   -moz-transform: rotate(-135deg);
@@ -310,29 +383,82 @@ a:hover [hover=rotate] {
 
 /* Tablets */
 @media (max-width:1023px) {
+
+  #header {
+    background-position: 0 -35px;
+  }
+
+  .featurette-image, .featurette-content {
+    float: none;
+    width: 100%;
+  }
+
   li#title {
     display: none;
   }
 
-  .navbar-list {
-    display: none;
+  #mobile-nav {
+    overflow: hidden;
+    height: 0;
   }
 
-  .navbar-open {
-    display: block;
+  #mobile-nav.mobile-nav-open {
+    overflow: visible;
+    height: auto;
+  }
+
+  .navbar-list {
   }
 
   #navbar {
+    position: fixed;
     height: 66px;
+  }
+
+  #navbar li {
+    float: none;
   }
   
   #navbar h3 {
     display: block;
     font-size: 28px;
-    padding: 15px 15px 15px 0;
-  }
+    padding: 15px  }
 
-  #nav-icon1 {
+  #nav-button {
     display: block;
   }
+}
+
+/* Smartphones */
+@media (max-width:767px) {
+  #intros section {
+    width: 100%;
+    float: none;
+  }
+
+  #header {
+    background-position: 0 57px;
+    padding-bottom: 20px;
+  }
+
+  #header h1 {
+    font-size: 3em;
+  }
+
+  #header h1, #header h2 {
+    padding: 10px 15px;
+  }
+
+  .warning {
+    background-image: none;
+  }
+
+  .warning h2, .warning p {
+    margin-left: 0px;
+  }
+
+.content {
+  padding: 0 25px;
+}
+
 }

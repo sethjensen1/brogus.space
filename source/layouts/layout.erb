@@ -13,18 +13,20 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
+            $('#nav-button').click(function(){
                 $(this).toggleClass('open');
                 $('.navbar-list').toggleClass('navbar-open');
+                $('#mobile-nav').toggleClass('mobile-nav-open');
             });
         });
     </script>
+    <script type="text/javascript" src="/javascripts/site.js"></script>
   </head>
   <body>
     <nav id="navbar">
 
       <!-- mobile -->
-      <div id="nav-icon1">
+      <div id="nav-button">
         <span></span>
         <span></span>
         <span></span>
@@ -32,14 +34,16 @@
       <h3>brogus.space</h3>
 
       <!-- desktop & mobile -->
-      <ul class="content navbar-list">
-        <li id="title"><%= link_to "brogus.space", "/" %></li>
-        <li><%= current_link_to "Home", "/" %></li>
-        <li><%= current_link_to "Brogal Implants", "/implants.html" %></li>
-        <li><%= current_link_to "Seepage and Discharge", "/seepage_and_discharge.html" %></li>
-        <li><%= current_link_to "Our Team", "/team.html" %></li>
-        <li><%= current_link_to "Contact", "/contact.html" %></li>
-      </ul>
+      <div id="mobile-nav">
+        <ul class="navbar-list">
+          <li id="title"><a href="/">brogus.space</a></li>
+          <!--
+<%# for page in [["implants.html", "Brogal Implants"], ["seepage_and_discharge.html", "Seepage and Discharge"], ["team.html", "Our Team"], ["contact.html", "Contact"]] %>
+            <li <%# if current_page.path == page[0] %>class="active<%# end %>><a href="/<%# page[0] %>"><%# page[1] %></a></li>
+          <%# end %> 
+-->
+        </ul>
+      </div>
     </nav>
     <%= yield %>
     <footer>
