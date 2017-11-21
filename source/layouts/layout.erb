@@ -15,7 +15,6 @@
         $(document).ready(function(){
             $('#nav-button').click(function(){
                 $(this).toggleClass('open');
-                $('.navbar-list').toggleClass('navbar-open');
                 $('#mobile-nav').toggleClass('mobile-nav-open');
             });
         });
@@ -36,12 +35,12 @@
       <!-- desktop & mobile -->
       <div id="mobile-nav">
         <ul class="navbar-list">
-          <li id="title"><a href="/">brogus.space</a></li>
-          <!--
-<%# for page in [["implants.html", "Brogal Implants"], ["seepage_and_discharge.html", "Seepage and Discharge"], ["team.html", "Our Team"], ["contact.html", "Contact"]] %>
-            <li <%# if current_page.path == page[0] %>class="active<%# end %>><a href="/<%# page[0] %>"><%# page[1] %></a></li>
-          <%# end %> 
--->
+          <li><a id="title" href="/">brogus.space</a></li>
+          <li><a class="navbar-items" href="/">Home</a></li>
+          <li><a class="navbar-items" href="/implants.html">Brogal Implants</a></li>
+          <li><a class="navbar-items" href="/seepage_and_discharge.html">Seepage and Discharge</a></li>
+          <li><a class="navbar-items" href="/team.html">Our Team</a></li>
+          <li><a class="navbar-items" href="/contact.html">Contact Us</a></li>
         </ul>
       </div>
     </nav>
