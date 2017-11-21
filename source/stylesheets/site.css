@@ -193,15 +193,19 @@ a#title {
   height: 20px;
 }
 
-#intros {
+.intros {
   overflow: auto;
 }
 
-#intros section {
+.intros section {
   width: 30%;
   padding: 1%;
   float: left;
   text-align: center;
+}
+
+.team-intros {
+  margin-top: 30px;
 }
 
 .img-circle {
@@ -215,6 +219,7 @@ p, h1, h2, h3, h4, h5, h6, img {
 
 a .img-circle {
   border: 2px solid #0effde;
+  filter: grayscale(100%);
 }
 
 a {
@@ -227,6 +232,10 @@ nav a {
   display: block;
 }
 
+a [hover=rotate] {
+  transition: .5s ease-in-out;
+}
+
 a:hover, a:hover *, nav a:hover {
   color: pink;
   animation: rainbow 1.8s infinite;
@@ -234,6 +243,7 @@ a:hover, a:hover *, nav a:hover {
 
 a:hover .img-circle {
   animation: rainbowborder 1.8s infinite;
+  filter: none;
 }
 
 a:hover [hover=rotate] {
@@ -438,9 +448,10 @@ table td, table th {
 
 /* Smartphones */
 @media (max-width:767px) {
-  #intros section {
+  .intros section {
     width: 100%;
     float: none;
+    margin-bottom: 20px;
   }
 
   #header {
