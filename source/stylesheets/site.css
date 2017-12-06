@@ -138,6 +138,10 @@ footer p {
   margin: 0;
 }
 
+.navbar-items {
+  padding: 15px 15px;
+}
+
 .active {
   color: white;
   font-weight: bold;
@@ -177,10 +181,6 @@ footer p {
 .active.space7 {
   background-image: url('/images/space-small-7.jpg');
   color: #000;
-}
-
-.navbar-items {
-  padding: 15px 15px;
 }
 
 a#title {
@@ -309,6 +309,11 @@ table td, table th {
   width: 58%;
 }
 
+.mobile-only {
+  display: none;
+}
+
+
 #mobile-nav {
   background-color: black;
   height: 0;
@@ -415,6 +420,10 @@ table td, table th {
 
   a#title {
     display: none;
+  }
+
+  .mobile-only {
+    display: block;
   }
 
   #mobile-nav {
