@@ -65,30 +65,23 @@ footer p {
   color: #ff9090;
 }
 
-[aria-current]:not([aria-current="false"]) {
-  font-weight: bold;
-}
-
-.warning {
-  background-color: #ff3030;
-  padding: 15px;
-  background-image: url(/images/bang.png);
-  background-repeat: no-repeat;
-  background-position: 3% 50%;
-  border-radius: 5px;
-}
-
 .rainbow-gradient {
   animation: pulse 3s 1;
   color: #ff0b45;
 }
 
+.warning {
+  background-color: #ff3030;
+  padding: 15px;
+  border-radius: 5px;
+}
+
 .warning h2 {
-  margin: 13px 0 10px 130px;
+  margin: 13px 10px;
 }
 
 .warning p {
-  margin-left: 130px;
+  margin: 10px 10px;
 }
 
 .thin {
@@ -208,13 +201,18 @@ a#title {
   margin-top: 30px;
 }
 
-.img-circle {
-  border-radius: 50%;
-}
-
 p, h1, h2, h3, h4, h5, h6, img {
   transition: inherit;
   color: inherit;
+}
+
+.img-warning {
+  padding: 5px 15px 5px 5px;
+  float: left;
+}
+
+.img-circle {
+  border-radius: 50%;
 }
 
 a .img-circle {
@@ -476,8 +474,8 @@ table td, table th {
     padding: 10px 15px;
   }
 
-  .warning {
-    background-image: none;
+  footer {
+    padding: 30px 25px;
   }
 
   .warning h2, .warning p {
