@@ -1,0 +1,67 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.details {
+  display: none;
+}
+
+.open .details {
+  display: initial;
+}
+
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tile {
+  color: #fff;
+  text-align: center;
+  width: 30%;
+  height: 400px;
+  margin: 10px 1%;
+}
+
+.tiles article {
+  transition: .2s ease-in-out;
+  filter: grayscale(80%);
+}
+
+.tiles article:hover {
+  filter: none;
+}
+
+.tiles article.open {
+  transform: scale(1.1);
+}
+
+.tiles article header {
+  height: 100px;
+  padding: 150px;
+}
+
+.img-tile {
+  width: 100%;
+}
+
+.space1 {
+  background-image: url("/images/space1.jpg");
+  background-size: 100%;
+}
+
+.space2 {
+  background-image: url("/images/space2.jpg");
+  background-size: 100%;
+}
+
+.space3 {
+  background-image: url("/images/space3.jpg");
+  background-size: 100%;
+}
