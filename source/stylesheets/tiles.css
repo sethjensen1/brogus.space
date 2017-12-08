@@ -1,12 +1,18 @@
 body {
   font-family: "Source Sans Pro", sans-serif;
   margin: 0;
-  padding: 0 250px;
+  padding: 0 250px 40px 250px;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline dotted;
   color: #fff;
+  font-size: 1.25em;
+  transition: .5s ease;
+}
+
+a:hover {
+  color: #6dff00;
 }
 
 .details {
@@ -15,7 +21,7 @@ a {
   transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 
-.open .details {
+.tile:hover .details {
   max-height: 15em;
   opacity: 1;
 }
@@ -54,6 +60,10 @@ a {
   z-index: 3;
 }
 
+.tile > div h2, .tile > div p {
+  padding: 0 .5em;
+}
+
 .tile-image {
   display: block;
   position: relative;
@@ -66,10 +76,11 @@ a {
   width: 100%;
   border-radius: 4px;
   overflow: hidden;
+  display: block;
 }
 
 .tile.style1 > .tile-image::before {
-  background: #f2849e;
+  background: #c75b9b;
 }
 
 .tile.style2 > .tile-image::before {
@@ -84,7 +95,13 @@ a {
   background: #7bd0c1;
 }
 
+.tile:hover > .tile-image::before {
+  background: #563927;
+  opacity: .35;
+}
+
 .tile-image::before {
+  transition: background-color 0.5s ease, opacity 0.5s ease;
   content: '';
   display: block;
   position: absolute;
@@ -119,4 +136,20 @@ a {
 .space4 {
   background-image: url("/images/space4.jpg");
   background-size: 100%;
+}
+
+/* Tablets */
+@media(max-width:1023px) {
+  body {
+    padding: 0 1.25em 1.25em 1.25em;
+  }
+
+  .tiles {
+    margin: 0;
+  }
+
+  .tile {
+    width: 100%;
+    margin: 2.25em 0 0 0;
+  }
 }
