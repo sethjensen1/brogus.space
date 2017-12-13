@@ -107,6 +107,10 @@ footer hr {
   background: #ca5656;
 }
 
+.tile.style6 > .tile-image::before {
+  background: #35b0ff;
+}
+
 .tile:hover > .tile-image::before {
   background: #563927;
   opacity: .35;
